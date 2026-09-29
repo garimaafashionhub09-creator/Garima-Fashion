@@ -51,8 +51,10 @@ app.use(
       // Allow explicitly listed origins
       if (allowedOrigins.includes(origin)) return callback(null, true);
       // Allow all Vercel preview deployments (*.vercel.app)
-      if (/^https:\/\/[a-zA-Z0-9-]+-[a-zA-Z0-9-]+\.vercel\.app$/.test(origin)) return callback(null, true);
       if (origin.endsWith(".vercel.app")) return callback(null, true);
+      // Allow custom domain and www subdomain
+      if (origin === "https://garimaafashionhub.com") return callback(null, true);
+      if (origin === "https://www.garimaafashionhub.com") return callback(null, true);
       callback(new Error("Not allowed by CORS"));
     },
     credentials: true,
