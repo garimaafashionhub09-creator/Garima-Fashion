@@ -21,6 +21,10 @@ dist-ssr
 .env.*
 !.env.example
 
+# Uploaded images — stored on Cloudinary in production, not in git
+backend/uploads/*
+!backend/uploads/.gitkeep
+
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars
