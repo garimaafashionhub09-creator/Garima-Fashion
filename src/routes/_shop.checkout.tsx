@@ -266,7 +266,7 @@ function CheckoutPage() {
       order_id: orderData.orderId,
       handler: async function (response) {
         try {
-          const verifyResponse = await fetch(`${import.meta.env.VITE_API_BASE_URL ?? "http://localhost:5000"}/api/payments/verify`, {
+          const verifyResponse = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:5000/api"}/payments/verify`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(response),
@@ -279,7 +279,7 @@ function CheckoutPage() {
             return;
           }
 
-          const backendResponse = await fetch(`${import.meta.env.VITE_API_BASE_URL ?? "http://localhost:5000"}/api/orders`, {
+          const backendResponse = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:5000/api"}/orders`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -398,7 +398,7 @@ function CheckoutPage() {
 
     if (!configuredRazorpayKey) {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL ?? "http://localhost:5000"}/api/orders`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:5000/api"}/orders`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -480,7 +480,7 @@ function CheckoutPage() {
         receipt: `garimaa-${Date.now()}`,
       };
 
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL ?? "http://localhost:5000"}/api/payments/create-order`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:5000/api"}/payments/create-order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

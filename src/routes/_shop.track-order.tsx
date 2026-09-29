@@ -35,7 +35,7 @@ function TrackOrder() {
       setError("");
 
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL ?? "http://localhost:5000"}/api/orders/mine`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:5000/api"}/orders/mine`, {
           headers: {
             Authorization: `Bearer ${customerToken}`,
           },
