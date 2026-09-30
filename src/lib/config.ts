@@ -5,9 +5,9 @@ export const BUSINESS = {
   name: "Garimaa Fashion Hub",
   tagline: "Elegance in Every Thread",
   /** WhatsApp number in international format, digits only. */
-  whatsappNumber: "917020308521",
-  email: "gaurigorivale@gmail.com",
-  phone: "7020308521",
+  whatsappNumber: "918830817754",
+  email: "garimafashionhub@gmail.com",
+  phone: "8830817754",
   upi: "gaurigorivale133@oksbi",
   supportHours: "Monday–Saturday, 10:00 AM – 6:00 PM",
   jurisdiction: "Pune, Maharashtra, India",
