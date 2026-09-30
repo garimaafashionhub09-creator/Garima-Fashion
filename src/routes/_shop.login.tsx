@@ -216,7 +216,7 @@ function LoginPage() {
                     id="login-phone"
                     type="tel"
                     autoComplete="tel"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 9999999999"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                   />
