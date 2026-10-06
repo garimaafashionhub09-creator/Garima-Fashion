@@ -1,3 +1,14 @@
+export type Review = {
+  _id: string;
+  product: string;
+  user: string;
+  userName: string;
+  rating: number;
+  comment: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
 export type Category = {
   id: string;
   name: string;
@@ -30,6 +41,7 @@ export type Product = {
   stock: number;
   isFeatured: boolean;
   isNewArrival: boolean;
+  isOffer: boolean;
   isActive: boolean;
   createdAt: string;
   updatedAt: string;

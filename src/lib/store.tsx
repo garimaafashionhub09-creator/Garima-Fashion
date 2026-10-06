@@ -143,6 +143,7 @@ function convertProduct(product: any): Product {
     stock: product.stock ?? 0,
     isFeatured: product.featured ?? false,
     isNewArrival: product.isNewArrival ?? false,
+    isOffer: product.isOffer ?? false,
     isActive: product.isActive ?? true,
     createdAt: product.createdAt || new Date().toISOString(),
     updatedAt: product.updatedAt || new Date().toISOString(),
@@ -491,6 +492,11 @@ export function ShopProvider({
           formData.append(
             "isNewArrival",
             String(p.isNewArrival),
+          );
+
+          formData.append(
+            "isOffer",
+            String(p.isOffer),
           );
 
           formData.append(

@@ -13,6 +13,7 @@ const userRoutes = require("./routes/userRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const cloudinaryRoutes = require("./routes/cloudinary");
+const reviewRoutes = require("./routes/reviewRoutes");
 
 const app = express();
 
@@ -117,6 +118,7 @@ app.use("/api/users", authLimiter, userRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/cloudinary", cloudinaryRoutes);
+app.use("/api/products/:productId/reviews", reviewRoutes);
 
 app.use((err, req, res, next) => {
   if (err && err.name === "UnauthorizedError") {

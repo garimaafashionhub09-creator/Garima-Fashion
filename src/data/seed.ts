@@ -72,6 +72,7 @@ const p = (
     stock: 12,
     isFeatured: false,
     isNewArrival: false,
+    isOffer: false,
     isActive: true,
     createdAt: now,
     updatedAt: now,

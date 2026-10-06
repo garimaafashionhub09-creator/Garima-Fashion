@@ -38,6 +38,7 @@ const blank = (category: string): Product => ({
   stock: 10,
   isFeatured: false,
   isNewArrival: true,
+  isOffer: false,
   isActive: true,
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
@@ -523,11 +524,7 @@ function AdminProducts() {
                 type="checkbox"
                 checked={draft.isFeatured}
                 onChange={(event) =>
-                  setDraft({
-                    ...draft,
-                    isFeatured:
-                      event.target.checked,
-                  })
+                  setDraft({ ...draft, isFeatured: event.target.checked })
                 }
               />
               Featured
@@ -538,11 +535,7 @@ function AdminProducts() {
                 type="checkbox"
                 checked={draft.isNewArrival}
                 onChange={(event) =>
-                  setDraft({
-                    ...draft,
-                    isNewArrival:
-                      event.target.checked,
-                  })
+                  setDraft({ ...draft, isNewArrival: event.target.checked })
                 }
               />
               New arrival
@@ -551,13 +544,20 @@ function AdminProducts() {
             <label className="flex items-center gap-2">
               <input
                 type="checkbox"
+                checked={draft.isOffer ?? false}
+                onChange={(event) =>
+                  setDraft({ ...draft, isOffer: event.target.checked })
+                }
+              />
+              <span className="font-medium text-primary">Special Offer</span>
+            </label>
+
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
                 checked={draft.isActive}
                 onChange={(event) =>
-                  setDraft({
-                    ...draft,
-                    isActive:
-                      event.target.checked,
-                  })
+                  setDraft({ ...draft, isActive: event.target.checked })
                 }
               />
               Active

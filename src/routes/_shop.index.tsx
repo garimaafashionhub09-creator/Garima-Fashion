@@ -70,8 +70,8 @@ const collectionSlides = [
     title: "Festival Styling Picks",
     subtitle: "Shop curated fashion edits with exclusive savings.",
     cta: "Shop Offers",
-    route: "/new-arrivals" as const,
-    slug: "new-arrivals",
+    route: "/offers" as const,
+    slug: "",
   },
 ];
 

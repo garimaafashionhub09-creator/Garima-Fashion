@@ -197,6 +197,9 @@ const createProduct = async (req, res) => {
     productData.isNewArrival =
       req.body.isNewArrival === "true";
 
+    productData.isOffer =
+      req.body.isOffer === "true";
+
     productData.isActive =
       req.body.isActive !== "false";
 
@@ -319,6 +322,11 @@ const updateProduct = async (req, res) => {
     if (req.body.isNewArrival !== undefined) {
       productData.isNewArrival =
         req.body.isNewArrival === "true";
+    }
+
+    if (req.body.isOffer !== undefined) {
+      productData.isOffer =
+        req.body.isOffer === "true";
     }
 
     if (req.body.isActive !== undefined) {
